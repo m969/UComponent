@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 
-namespace EGamePlay
+namespace UComponent
 {
     public static class IdFactory
     {

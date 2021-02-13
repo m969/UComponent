@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using GameUtils;
 
-namespace EGamePlay
+namespace UComponent
 {
     public abstract partial class Entity
     {

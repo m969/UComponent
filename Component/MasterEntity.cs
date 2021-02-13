@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace EGamePlay
+namespace UComponent
 {
     [System.AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     sealed class EnableUpdateAttribute : Attribute

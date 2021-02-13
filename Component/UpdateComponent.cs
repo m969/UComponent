@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EGamePlay
+namespace UComponent
 {
     [EnableUpdate]
     public class UpdateComponent : Component

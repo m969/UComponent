@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace EGamePlay
+namespace UComponent
 {
     public sealed class EventSubscribeCollection<T> where T : class
     {
