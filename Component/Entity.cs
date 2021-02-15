@@ -90,7 +90,7 @@ namespace UComponent
         public bool IsDisposed { get { return InstanceId == 0; } }
         public Dictionary<Type, Component> Components { get; set; } = new Dictionary<Type, Component>();
         private List<Entity> Children { get; set; } = new List<Entity>();
-        private Dictionary<Type, List<Entity>> Type2Children { get; set; } = new Dictionary<Type, List<Entity>>();
+        public Dictionary<Type, List<Entity>> Type2Children { get; set; } = new Dictionary<Type, List<Entity>>();
 
 
         public Entity()
@@ -154,6 +154,11 @@ namespace UComponent
         }
 
         public virtual void OnSetParent(Entity parent)
+        {
+
+        }
+
+        public virtual void OnAddChild(Entity child)
         {
 
         }
@@ -230,6 +235,7 @@ namespace UComponent
             }
             Type2Children[child.GetType()].Add(child);
             child.Parent = this;
+            OnAddChild(child);
 #if !SERVER
             child.GameObject.transform.SetParent(GameObject.transform);
 #endif
